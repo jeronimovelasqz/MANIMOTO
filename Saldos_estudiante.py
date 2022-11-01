@@ -183,7 +183,7 @@ class Consultas():
                 return
 
         # ==================================================Frames===================================================
-        Cuadro_principal = Frame(self.administrador, bg='#EEEEB4')
+        Cuadro_principal = Frame(self.administrador, bg='lightblue')
         Cuadro_principal.grid()
 
         Titulo_cuadro  = LabelFrame(
@@ -207,12 +207,12 @@ class Consultas():
 
 
 
-        cuadro_2 = LabelFrame(cuadro_de_datos, width=495, height=350, bg='Navajo white', relief='ridge', bd=8,text='Recibo', font=('arial', 15, 'bold'))
+        cuadro_2 = LabelFrame(cuadro_de_datos, width=495, height=350, bg='#FFFFEF', relief='ridge', bd=8,text='Recibo', font=('arial', 15, 'bold'))
         cuadro_2.pack(side=RIGHT, padx=10)
 
 
 
-        Cuadro_de_lista = Frame( Cuadro_principal, width=1350, height=150, bg='#F8F8F8', relief='ridge', bd=15)
+        Cuadro_de_lista = Frame( Cuadro_principal, width=1350, height=150, bg='lightblue', relief='ridge', bd=15)
         Cuadro_de_lista.pack(side=TOP, padx=15)
 
 
@@ -282,25 +282,25 @@ class Consultas():
 
 
 
-        self.recibo_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.recibo, bg="#FFFFB9")
+        self.recibo_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.recibo, bg="#FFFFEF")
         self.recibo_entrada.grid(row=0, column=1, padx=15, pady=5)
 
 
 
 
-        self.nombre_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.nombre, bg="#FFFFB9")
+        self.nombre_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.nombre, bg="#FFFFEF")
         self.nombre_entrada.grid(row=1, column=1, padx=15, pady=5)
 
 
 
 
-        self.admision_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.admision , bg="#FFFFB9")
+        self.admision_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.admision , bg="#FFFFEF")
         self.admision_entrada.grid(row=2, column=1, padx=15, pady=5)
 
 
 
 
-        self.fecha_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.fecha, bg="#FFFFB9")
+        self.fecha_entrada = Entry(cuadro_1, font=('arial', 14), textvariable=self.fecha, bg="#FFFFEF")
         self.fecha_entrada.grid(row=3, column=1, padx=15, pady=5)
 
 
@@ -319,19 +319,19 @@ class Consultas():
 
 
 
-        self.total_entrada = Entry(cuadro_1, font=( 'arial', 14), width=10, textvariable=self.total, bg="#FFFFB9")
+        self.total_entrada = Entry(cuadro_1, font=( 'arial', 14), width=10, textvariable=self.total, bg="#FFFFEF")
         self.total_entrada.grid(row=2, column=3, padx=8, pady=5)
 
 
 
 
-        self.pago_entrada = Entry(cuadro_1, font=('arial', 14), width=10, textvariable=self.pago, bg="#FFFFB9")
+        self.pago_entrada = Entry(cuadro_1, font=('arial', 14), width=10, textvariable=self.pago, bg="#FFFFEF")
         self.pago_entrada.grid(row=3, column=3, pady=5)
 
 
 
 
-        self.pagare_entrada = Entry(cuadro_1, font=( 'arial', 14), width=10, textvariable=self.pagare, bg="#FFFFB9")
+        self.pagare_entrada = Entry(cuadro_1, font=( 'arial', 14), width=10, textvariable=self.pagare, bg="#FFFFEF")
         self.pagare_entrada.grid(row=4, column=3, pady=7)
 
 

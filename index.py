@@ -81,7 +81,7 @@ class Ventana_1:
     def Reset(self):
         self.usuario.set("")
         self.contraseña.set("")
-        self.text_usuario.focus()
+        self.texto_usuario.focus()
 
     def Exit(self):
         self.Exit = tkinter.messagebox.askokcancel("sistema de logeo", "Confirme si quiere salir")
