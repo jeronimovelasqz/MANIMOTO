@@ -14,10 +14,10 @@ def connect():
 
 def insert(nombre=" ", nombrePadre=" ", nombreMadre=" ", direccion=" ", telefono=" ", email=" ", fechaNacimiento=" ",
            genero=" "):
-    conn = sqlite3.connect("student.db")
+    conn = sqlite3.connect("estudiantes.db")
     cur = conn.cursor()
 
-    cur.execute("INSERT INTO student VALUES (NULL,?,?,?,?,?,?,?,?)",
+    cur.execute("INSERT INTO estudiantes VALUES (NULL,?,?,?,?,?,?,?,?)",
                 (nombre, nombrePadre, nombreMadre, direccion, telefono, email, fechaNacimiento, genero))
 
     conn.commit()
@@ -25,10 +25,10 @@ def insert(nombre=" ", nombrePadre=" ", nombreMadre=" ", direccion=" ", telefono
 
 
 def view():
-    conn = sqlite3.connect("student.db")
+    conn = sqlite3.connect("estudiantes.db")
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM student")
+    cur.execute("SELECT * FROM estudiantes")
     rows = cur.fetchall()
     return rows
 
@@ -36,10 +36,10 @@ def view():
 
 
 def delete(id):
-    conn = sqlite3.connect("student.db")
+    conn = sqlite3.connect("estudiantes.db")
     cur = conn.cursor()
 
-    cur.execute("DELETE FROM student WHERE id = ?", (id,))
+    cur.execute("DELETE FROM estudiantes WHERE id = ?", (id,))
 
     conn.commit()
     conn.close()
@@ -47,11 +47,11 @@ def delete(id):
 
 def update(id, nombre=" ", nombrePadre=" ", nombreMadre=" ", direccion=" ", telefono=" ", email=" ",
            fechaNacimiento=" ", genero=" "):
-    conn = sqlite3.connect("student.db")
+    conn = sqlite3.connect("estudiantes.db")
     cur = conn.cursor()
 
     cur.execute(
-        "UPDATE student SET nombre = ? OR nombrePadre = ? OR nombreMadre = ? OR direccion = ? OR telefono = ? OR email = ? OR fechaNacimiento = ? OR genero = ?", \
+        "UPDATE estudiantes SET nombre = ? OR nombrePadre = ? OR nombreMadre = ? OR direccion = ? OR telefono = ? OR email = ? OR fechaNacimiento = ? OR genero = ?", \
         (nombre, nombrePadre, nombreMadre, direccion, telefono, email, fechaNacimiento, genero))
 
     conn.commit()
@@ -61,11 +61,11 @@ def update(id, nombre=" ", nombrePadre=" ", nombreMadre=" ", direccion=" ", tele
 def search(nombre=" ", nombrePadre=" ", nombreMadre=" ", direccion=" ", telefono=" ", email=" ", fechaNacimiento=" ",
            genero=" "):
     try:
-        conn = sqlite3.connect("student.db")
+        conn = sqlite3.connect("estudiantes.db")
         cur = conn.cursor()
 
         cur.execute(
-            "SELECT * FROM student WHERE nombre = ? OR nombrePadre = ? OR nombreMadre = ? OR direccion = ? OR telefono = ? OR email = ? OR fechaNacimiento = ? OR genero = ?",
+            "SELECT * FROM estudiantes WHERE nombre = ? OR nombrePadre = ? OR nombreMadre = ? OR direccion = ? OR telefono = ? OR email = ? OR fechaNacimiento = ? OR genero = ?",
             (nombre, nombrePadre, nombreMadre, direccion, telefono, email, fechaNacimiento, genero))
         rows = cur.fetchall()
         return rows

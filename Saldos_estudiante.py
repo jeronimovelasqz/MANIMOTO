@@ -177,7 +177,7 @@ class Consultas():
 
         def Salir():
             Exit = tkinter.messagebox.askyesno(
-                'Attention', 'Confirm, if you want to Exit')
+                'atencion', 'confirme si quiere salir')
             if Exit > 0:
                 root.destroy()
                 return
